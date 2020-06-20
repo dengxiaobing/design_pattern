@@ -6,5 +6,12 @@ package cn.niudehua.design.principle.singleresponsibility;
  * @desc:
  */
 public interface ICourse {
-
+//    String courseName();
+//
+//    byte[] courseVideo();
+//
+//
+//    void studyCourse();
+//
+//    void refundCourse();
 }
