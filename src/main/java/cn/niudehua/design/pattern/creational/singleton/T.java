@@ -10,8 +10,10 @@ public class T implements Runnable {
     public void run() {
 //        LazySingleton instance = LazySingleton.getInstance();
 //        System.out.println(Thread.currentThread().getName() + "获取LazySingleton单例：" + instance);
-        LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
-        System.out.println(Thread.currentThread().getName() + "获取LazyDoubleCheckSingleton单例：" + instance);
 
+//        LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
+//        System.out.println(Thread.currentThread().getName() + "获取LazyDoubleCheckSingleton单例：" + instance);
+        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+        System.out.println(Thread.currentThread().getName() + "获取StaticInnerClassSingleton单例：" + instance);
     }
 }
