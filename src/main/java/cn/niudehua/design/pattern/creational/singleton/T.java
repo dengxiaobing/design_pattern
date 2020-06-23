@@ -8,7 +8,10 @@ package cn.niudehua.design.pattern.creational.singleton;
 public class T implements Runnable {
     @Override
     public void run() {
-        LazySingleton instance = LazySingleton.getInstance();
-        System.out.println(Thread.currentThread().getName() + "获取单例：" + instance);
+//        LazySingleton instance = LazySingleton.getInstance();
+//        System.out.println(Thread.currentThread().getName() + "获取LazySingleton单例：" + instance);
+        LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
+        System.out.println(Thread.currentThread().getName() + "获取LazyDoubleCheckSingleton单例：" + instance);
+
     }
 }
