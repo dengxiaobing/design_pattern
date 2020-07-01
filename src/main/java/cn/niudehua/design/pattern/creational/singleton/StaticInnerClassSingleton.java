@@ -7,6 +7,10 @@ package cn.niudehua.design.pattern.creational.singleton;
  */
 public class StaticInnerClassSingleton {
     private StaticInnerClassSingleton() {
+        // 反射攻击解决方法
+        if (InnerClass.staticInnerClassSingleton != null) {
+            throw new RuntimeException("单例构造器禁止反射调用");
+        }
     }
 
     private static class InnerClass {
