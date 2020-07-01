@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException;
  * @datetime: 2020/6/23 9:47 下午
  * @desc:
  */
-public class HungrySingleton implements Serializable {
+public class HungrySingleton implements Serializable, Cloneable {
     private static HungrySingleton hungrySingleton;
 
     static {
@@ -29,6 +29,12 @@ public class HungrySingleton implements Serializable {
 
     public Object readResolve() {
         return hungrySingleton;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+        return getInstance();
     }
 
     public static void main(String[] args) throws NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException, InstantiationException {
